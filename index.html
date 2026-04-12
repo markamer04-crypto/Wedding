@@ -3,75 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayman & Marina | Better Together</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <title>Our Special Day</title>
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="hero">
+    <header class="hero">
         <div id="petal-container"></div>
-        <div class="subtitle">We Are Getting Married</div>
-        <h1>Ayman & Marina</h1>
-        <p>Thursday, April 16, 2026</p>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </div>
-
-    <section id="story">
-        <h2>Our Story</h2>
-        <p style="line-height: 1.8; font-size: 1.1rem;">
-            Two hearts, one journey. Ayman and Marina invite you to witness the beginning 
-            of their forever. We are so blessed to share this beautiful day with our 
-            family and friends as we celebrate a love that is better together.
-        </p>
-    </section>
+        <h1>Our Story</h1>
+        <div class="subtitle">Join us in celebrating our journey</div>
+        <p>Save the Date</p>
+        <div class="scroll-indicator"><span></span></div>
+    </header>
 
     <section id="gallery">
-        <h2>Our Moments</h2>
-        <div class="gallery-grid" id="galleryGrid">
-            <!-- Photos will be loaded here by JavaScript -->
-        </div>
-    </section>
-
-    <section id="details">
-        <h2>The Celebration</h2>
-        <div class="details-grid">
-            <div class="detail-card">
-                <div class="card-icon">🕔</div>
-                <h3>When</h3>
-                <p>Thursday, April 16, 2026<br><strong>Ceremony Begins at 5:00 PM</strong></p>
-            </div>
-            <div class="detail-card">
-                <div class="card-icon">📍</div>
-                <h3>Where</h3>
-                <p>The Garden Pavilion<br><strong>Skyline Avenue, Cairo</strong></p>
-            </div>
+        <h2>Captured Moments</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="wedding(1).jpeg" alt="Photo 1"><div class="photo-overlay">Moment 1</div></div>
+            <div class="gallery-item"><img src="wedding(2).jpeg" alt="Photo 2"><div class="photo-overlay">Moment 2</div></div>
+            <div class="gallery-item"><img src="wedding(3).jpeg" alt="Photo 3"><div class="photo-overlay">Moment 3</div></div>
+            <div class="gallery-item"><img src="wedding(4).jpeg" alt="Photo 4"><div class="photo-overlay">Moment 4</div></div>
+            <div class="gallery-item"><img src="wedding(5).jpeg" alt="Photo 5"><div class="photo-overlay">Moment 5</div></div>
+            <div class="gallery-item"><img src="wedding(6).jpeg" alt="Photo 6"><div class="photo-overlay">Moment 6</div></div>
+            <div class="gallery-item"><img src="wedding(7).jpeg" alt="Photo 7"><div class="photo-overlay">Moment 7</div></div>
+            <div class="gallery-item"><img src="wedding(8).jpeg" alt="Photo 8"><div class="photo-overlay">Moment 8</div></div>
+            <div class="gallery-item"><img src="wedding(9).jpeg" alt="Photo 9"><div class="photo-overlay">Moment 9</div></div>
+            <div class="gallery-item"><img src="wedding(10).jpeg" alt="Photo 10"><div class="photo-overlay">Moment 10</div></div>
+            <div class="gallery-item"><img src="wedding(11).jpeg" alt="Photo 11"><div class="photo-overlay">Moment 11</div></div>
+            <div class="gallery-item"><img src="wedding(12).jpeg" alt="Photo 12"><div class="photo-overlay">Moment 12</div></div>
+            <div class="gallery-item"><img src="wedding(13).jpeg" alt="Photo 13"><div class="photo-overlay">Moment 13</div></div>
+            <div class="gallery-item"><img src="wedding(14).jpeg" alt="Photo 14"><div class="photo-overlay">Moment 14</div></div>
+            <div class="gallery-item"><img src="wedding(15).jpeg" alt="Photo 15"><div class="photo-overlay">Moment 15</div></div>
+            <div class="gallery-item"><img src="wedding(16).jpeg" alt="Photo 16"><div class="photo-overlay">Moment 16</div></div>
         </div>
     </section>
 
     <section id="rsvp">
-        <h2>RSVP</h2>
-        <div class="rsvp-form">
-            <form id="rsvpForm">
-                <input type="text" id="name" placeholder="Full Name" required>
-                <select id="attendance" required>
-                    <option value="" disabled selected>Will you be joining us?</option>
-                    <option value="yes">Yes, I'll be there! 🎉</option>
-                    <option value="no">Sadly, I can't make it 😢</option>
-                </select>
-                <input type="number" id="guests" placeholder="Number of Guests" min="1" max="4">
-                <button type="submit">Send Response</button>
-            </form>
-            <p id="formMessage" style="margin-top: 15px; display: none;"></p>
-        </div>
+        <h2>Will You Join Us?</h2>
+        <form class="rsvp-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select>
+                <option value="yes">Yes, I'll be there!</option>
+                <option value="no">Sadly, I can't make it</option>
+            </select>
+            <button type="submit">Send RSVP</button>
+        </form>
     </section>
 
     <footer>
-        <p>&hearts; Ayman & Marina &hearts;</p>
+        <p>Created with Love &copy; 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function createPetal() {
+            const container = document.getElementById('petal-container');
+            if(!container) return;
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.width = Math.random() * 15 + 10 + 'px';
+            petal.style.height = petal.style.width;
+            petal.style.animationDuration = Math.random() * 5 + 7 + 's';
+            container.appendChild(petal);
+            setTimeout(() => { petal.remove(); }, 12000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+
 </body>
 </html>
