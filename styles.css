@@ -448,3 +448,11 @@ footer {
     90% { opacity: 0.7; }
     100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
 }
+<section id="special-note">
+    <div class="single-moment-container">
+        <div class="moment-box">
+            <img src="wedding(18).jpeg" alt="Food and Fun">
+            <div class="moment-label">Don't worry about food because we got you covered 😉</div>
+        </div>
+    </div>
+</section>
