@@ -108,7 +108,6 @@ section {
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
-    min-height: auto;
 }
 
 h2 {
@@ -134,11 +133,6 @@ h3 {
     margin-bottom: 15px;
 }
 
-p {
-    line-height: 1.8;
-    font-size: 1rem;
-}
-
 /* --- Gallery --- */
 #gallery {
     background: #f9f7f4;
@@ -146,7 +140,7 @@ p {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     margin-top: 40px;
 }
@@ -158,6 +152,7 @@ p {
     aspect-ratio: 1;
     cursor: pointer;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background-color: #eee; /* Placeholder color if image fails */
 }
 
 .gallery-item img {
@@ -212,11 +207,6 @@ p {
     border-color: var(--primary-gold);
 }
 
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
 /* --- RSVP Form --- */
 .rsvp-form {
     background: white;
@@ -236,7 +226,6 @@ input, select {
     border-radius: 4px;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
-    box-sizing: border-box;
     transition: all 0.3s;
 }
 
@@ -252,7 +241,7 @@ button {
     margin-top: 25px;
     background: var(--text-dark);
     color: white;
-    border: 2px solid var(--text-dark);
+    border: none;
     border-radius: 4px;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
@@ -265,15 +254,7 @@ button {
 
 button:hover {
     background: var(--primary-gold);
-    border-color: var(--primary-gold);
     color: var(--text-dark);
-}
-
-#formMessage {
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 4px;
-    display: none;
 }
 
 /* --- Footer --- */
@@ -282,36 +263,21 @@ footer {
     color: white;
     text-align: center;
     padding: 30px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 /* --- Animations --- */
-@keyframes fadeIn { 
-    from { opacity: 0; } 
-    to { opacity: 1; } 
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(40px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-40px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
     .details-grid { grid-template-columns: 1fr; }
     .gallery-grid { grid-template-columns: 1fr 1fr; }
-    .rsvp-form { padding: 30px; }
-    section { padding: 60px 20px; }
 }
 
 @media (max-width: 480px) {
-    .hero h1 { font-size: 2rem; }
     .gallery-grid { grid-template-columns: 1fr; }
-    h2 { font-size: 1.8rem; }
+    h2 { font-size: 2rem; }
 }
