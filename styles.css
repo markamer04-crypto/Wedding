@@ -355,6 +355,7 @@ footer {
     object-fit: cover;
     border-radius: 15px;
 }
+
 /* Location Cards Styling */
 #location-details {
     background-color: var(--soft-white);
