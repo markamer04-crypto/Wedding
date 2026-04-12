@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayman & Marina | Better Together</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="hero">
+        <div id="petal-container"></div>
+        <div class="subtitle">We Are Getting Married</div>
+        <h1>Ayman & Marina</h1>
+        <p>Thursday, April 16, 2026</p>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </div>
+
+    <section id="story">
+        <h2>Our Story</h2>
+        <p style="line-height: 1.8; font-size: 1.1rem;">
+            Two hearts, one journey. Ayman and Marina invite you to witness the beginning 
+            of their forever. We are so blessed to share this beautiful day with our 
+            family and friends as we celebrate a love that is better together.
+        </p>
+    </section>
+
+    <section id="gallery">
+        <h2>Our Moments</h2>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Photos will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <section id="details">
+        <h2>The Celebration</h2>
+        <div class="details-grid">
+            <div class="detail-card">
+                <div class="card-icon">🕔</div>
+                <h3>When</h3>
+                <p>Thursday, April 16, 2026<br><strong>Ceremony Begins at 5:00 PM</strong></p>
+            </div>
+            <div class="detail-card">
+                <div class="card-icon">📍</div>
+                <h3>Where</h3>
+                <p>The Garden Pavilion<br><strong>Skyline Avenue, Cairo</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <div class="rsvp-form">
+            <form id="rsvpForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <select id="attendance" required>
+                    <option value="" disabled selected>Will you be joining us?</option>
+                    <option value="yes">Yes, I'll be there! 🎉</option>
+                    <option value="no">Sadly, I can't make it 😢</option>
+                </select>
+                <input type="number" id="guests" placeholder="Number of Guests" min="1" max="4">
+                <button type="submit">Send Response</button>
+            </form>
+            <p id="formMessage" style="margin-top: 15px; display: none;"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&hearts; Ayman & Marina &hearts;</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
