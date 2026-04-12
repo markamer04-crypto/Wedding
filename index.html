@@ -52,18 +52,27 @@
 </section>
 
 <script>
-    // --- Countdown Logic ---
-    const weddingDate = new Date("April 16, 2026 15:00:00").getTime(); // SET YOUR DATE HERE
-
-    setInterval(function() {
-        const now = new Date().getTime();
-        const distance = weddingDate - now;
-
-        document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
-        document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    }, 1000);
-
+    <section id="countdown-section">
+    <h2>Days until the Wedding</h2>
+    <div id="countdown">
+        <div class="time-box">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+        <div class="time-box">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Mins</p>
+        </div>
+        <div class="time-box second-box">
+            <span id="seconds">00</span>
+            <p>Secs</p>
+        </div>
+    </div>
+</section>
     // --- Swiper Slider Logic ---
     const swiper = new Swiper('.swiper', {
         effect: 'coverflow', // Makes it look elegant
