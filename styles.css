@@ -448,11 +448,38 @@ footer {
     90% { opacity: 0.7; }
     100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
 }
-<section id="special-note">
-    <div class="single-moment-container">
-        <div class="moment-box">
-            <img src="wedding(18).jpeg" alt="Food and Fun">
-            <div class="moment-label">Don't worry about food because we got you covered 😉</div>
-        </div>
-    </div>
-</section>
+
+#special-note {
+    padding: 20px 0; /* Minimal space around it */
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.mini-moment-container {
+    width: 200px; /* Much smaller width */
+}
+
+.mini-moment-box {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    text-align: center;
+}
+
+.mini-moment-box img {
+    width: 100%;
+    height: 220px; /* Much shorter height */
+    object-fit: cover;
+    display: block;
+}
+
+.mini-label {
+    padding: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem; /* Smaller text to match the box */
+    line-height: 1.3;
+    color: var(--text-dark);
+}
