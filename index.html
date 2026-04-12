@@ -16,16 +16,28 @@
         <p>Save the Date</p>
         <div class="scroll-indicator"><span></span></div>
     </header>
-
-    <section id="countdown-section">
-    <h2>Days until we say "I Do"</h2>
-    <div id="countdown">
-        <div class="time-box"><span id="days">00</span><p>Days</p></div>
-        <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
-        <div class="time-box"><span id="minutes">00</span><p>Min</p></div>
-    </div>
 </section>
-
+<script>
+    <section id="countdown-section">
+    <h2>Days until the Wedding</h2>
+    <div id="countdown">
+        <div class="time-box">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+        <div class="time-box">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Mins</p>
+        </div>
+        <div class="time-box second-box">
+            <span id="seconds">00</span>
+            <p>Secs</p>
+        </div>
+    </div>
 <section id="gallery">
     <h2>Captured Moments</h2>
     <div class="swiper">
@@ -50,28 +62,7 @@
         <div class="swiper-pagination"></div>
     </div>
 </section>
-
-<script>
-    <section id="countdown-section">
-    <h2>Days until the Wedding</h2>
-    <div id="countdown">
-        <div class="time-box">
-            <span id="days">00</span>
-            <p>Days</p>
-        </div>
-        <div class="time-box">
-            <span id="hours">00</span>
-            <p>Hours</p>
-        </div>
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <p>Mins</p>
-        </div>
-        <div class="time-box second-box">
-            <span id="seconds">00</span>
-            <p>Secs</p>
-        </div>
-    </div>
+    
 </section>
     // --- Swiper Slider Logic ---
     const swiper = new Swiper('.swiper', {
