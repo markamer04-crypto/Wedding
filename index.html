@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Special Day</title>
+    <title>Our Wedding Day</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,68 +20,132 @@
         <p>Save the Date</p>
         <div class="scroll-indicator"><span></span></div>
     </header>
-</section>
-<script>
+
     <section id="countdown-section">
-    <h2>Days until the Wedding</h2>
-    <div id="countdown">
-        <div class="time-box">
-            <span id="days">00</span>
-            <p>Days</p>
+        <h2>Days until the Wedding</h2>
+        <div id="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Mins</p>
+            </div>
+            <div class="time-box second-box">
+                <span id="seconds">00</span>
+                <p>Secs</p>
+            </div>
         </div>
-        <div class="time-box">
-            <span id="hours">00</span>
-            <p>Hours</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Captured Moments</h2>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="wedding(1).jpeg" alt="Moment 1"></div>
+                <div class="swiper-slide"><img src="wedding(2).jpeg" alt="Moment 2"></div>
+                <div class="swiper-slide"><img src="wedding(3).jpeg" alt="Moment 3"></div>
+                <div class="swiper-slide"><img src="wedding(4).jpeg" alt="Moment 4"></div>
+                <div class="swiper-slide"><img src="wedding(5).jpeg" alt="Moment 5"></div>
+                <div class="swiper-slide"><img src="wedding(6).jpeg" alt="Moment 6"></div>
+                <div class="swiper-slide"><img src="wedding(7).jpeg" alt="Moment 7"></div>
+                <div class="swiper-slide"><img src="wedding(8).jpeg" alt="Moment 8"></div>
+                <div class="swiper-slide"><img src="wedding(9).jpeg" alt="Moment 9"></div>
+                <div class="swiper-slide"><img src="wedding(10).jpeg" alt="Moment 10"></div>
+                <div class="swiper-slide"><img src="wedding(11).jpeg" alt="Moment 11"></div>
+                <div class="swiper-slide"><img src="wedding(12).jpeg" alt="Moment 12"></div>
+                <div class="swiper-slide"><img src="wedding(13).jpeg" alt="Moment 13"></div>
+                <div class="swiper-slide"><img src="wedding(14).jpeg" alt="Moment 14"></div>
+                <div class="swiper-slide"><img src="wedding(15).jpeg" alt="Moment 15"></div>
+                <div class="swiper-slide"><img src="wedding(16).jpeg" alt="Moment 16"></div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <p>Mins</p>
-        </div>
-        <div class="time-box second-box">
-            <span id="seconds">00</span>
-            <p>Secs</p>
-        </div>
-    </div>
-<section id="gallery">
-    <h2>Captured Moments</h2>
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="wedding (1).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (2).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (3).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (4).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (5).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (6).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (7).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (8).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (9).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (10).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (11).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (12).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (13).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (14).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (15).jpeg"></div>
-            <div class="swiper-slide"><img src="wedding (16).jpeg"></div>
-        </div>
-        <div class="swiper-pagination"></div>
-    </div>
-</section>
-</section>
-    // --- Swiper Slider Logic ---
-    const swiper = new Swiper('.swiper', {
-        effect: 'coverflow', // Makes it look elegant
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
-        pagination: { el: '.swiper-pagination' },
-    });
-</script>
+    </section>
+
+    <section id="rsvp">
+        <h2>Will You Join Us?</h2>
+        <form class="rsvp-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select>
+                <option value="yes">Yes, I'll be there!</option>
+                <option value="no">Sadly, I can't make it</option>
+            </select>
+            <button type="submit">Send RSVP</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Created with Love &copy; 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // 1. COUNTDOWN LOGIC
+        // Update this date to your actual wedding date!
+        const weddingDate = new Date("June 20, 2026 15:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "<h3>The Celebration has Begun!</h3>";
+            }
+        }, 1000);
+
+        // 2. SWIPER SLIDER LOGIC
+        const swiper = new Swiper('.swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        // 3. PETAL ANIMATION LOGIC
+        function createPetal() {
+            const container = document.getElementById('petal-container');
+            if(!container) return;
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.width = Math.random() * 15 + 10 + 'px';
+            petal.style.height = petal.style.width;
+            petal.style.animationDuration = Math.random() * 5 + 7 + 's';
+            container.appendChild(petal);
+            setTimeout(() => { petal.remove(); }, 12000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+
 </body>
 </html>
