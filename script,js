@@ -1,0 +1,109 @@
+// Floating Petals
+const container = document.getElementById('petal-container');
+
+function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.width = Math.random() * 15 + 10 + 'px';
+    petal.style.height = petal.style.width;
+    petal.style.animationDuration = Math.random() * 5 + 7 + 's';
+    container.appendChild(petal);
+
+    setTimeout(() => { petal.remove(); }, 12000);
+}
+
+setInterval(createPetal, 400);
+
+// Scroll Reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// RSVP Form Handler
+const rsvpForm = document.getElementById('rsvpForm');
+const formMessage = document.getElementById('formMessage');
+
+if (rsvpForm) {
+    rsvpForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const attendance = document.getElementById('attendance').value;
+        const guests = document.getElementById('guests').value || '1';
+        
+        formMessage.style.display = 'block';
+        formMessage.style.color = '#155724';
+        formMessage.style.background = '#d4edda';
+        formMessage.textContent = 'Thank you, ' + name + '! We have received your RSVP for ' + guests + ' guest(s).';
+        
+        rsvpForm.reset();
+        
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
+    });
+}// Floating Petals
+const container = document.getElementById('petal-container');
+
+function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.width = Math.random() * 15 + 10 + 'px';
+    petal.style.height = petal.style.width;
+    petal.style.animationDuration = Math.random() * 5 + 7 + 's';
+    container.appendChild(petal);
+
+    setTimeout(() => { petal.remove(); }, 12000);
+}
+
+setInterval(createPetal, 400);
+
+// Scroll Reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+// RSVP Form Handler
+const rsvpForm = document.getElementById('rsvpForm');
+const formMessage = document.getElementById('formMessage');
+
+if (rsvpForm) {
+    rsvpForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const attendance = document.getElementById('attendance').value;
+        const guests = document.getElementById('guests').value || '1';
+        
+        formMessage.style.display = 'block';
+        formMessage.style.color = '#155724';
+        formMessage.style.background = '#d4edda';
+        formMessage.textContent = 'Thank you, ' + name + '! We have received your RSVP for ' + guests + ' guest(s).';
+        
+        rsvpForm.reset();
+        
+        setTimeout(() => {
+            formMessage.style.display = 'none';
+        }, 5000);
+    });
+}
