@@ -481,3 +481,54 @@ footer {
     color: var(--text-dark);
     background: white;
 }
+
+/* --- Clickable Location Card Styles --- */
+
+/* This removes the blue underline and default link look */
+.location-card-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+}
+
+.location-card {
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--primary-gold);
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* This makes the card lift up when someone hovers over it */
+.location-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: var(--soft-white);
+    color: var(--primary-gold);
+    border: 1px solid var(--primary-gold);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+/* Changes button color when the card is hovered */
+.location-card:hover .map-btn {
+    background-color: var(--primary-gold);
+    color: white;
+}
