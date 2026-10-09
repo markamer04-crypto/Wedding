@@ -541,17 +541,19 @@ footer {
 /* ... your existing CSS styles ... */
 
 /* 👇 ADD THE NEW ROPE STYLES AT THE VERY BOTTOM */
+/* Force canvas size and position regardless of existing site CSS */
 #rope-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 99999;
-  background-color: #263238;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  display: block !important;
+  z-index: 99999 !important;
+  background-color: #1a1a1a !important;
   cursor: grab;
   touch-action: none;
-  transition: opacity 0.8s ease-out;
+}
 }
 
 #rope-canvas:active { cursor: grabbing; }
