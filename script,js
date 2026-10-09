@@ -126,11 +126,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add('rope-locked');
 
   function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    if (!isRevealed && points.length === 0) {
+    width = canvas.width = window.innerWidth || document.documentElement.clientWidth || 300;
+    height = canvas.height = window.innerHeight || document.documentElement.clientHeight || 300;
+    
+    // Always recreate the heart points with the updated dimensions
+    if (!isRevealed) {
       initHeartRope();
     }
+  }
   }
 
   // Generates heart shape points using parametric heart formula
