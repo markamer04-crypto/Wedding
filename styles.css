@@ -532,3 +532,36 @@ footer {
     background-color: var(--primary-gold);
     color: white;
 }
+/* ... your existing CSS styles ... */
+
+/* 👇 ADD THE NEW ROPE STYLES AT THE VERY BOTTOM */
+#rope-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #263238;
+  cursor: grab;
+  touch-action: none;
+  transition: opacity 0.8s ease-out;
+}
+
+#rope-canvas:active { cursor: grabbing; }
+#rope-canvas.hidden { opacity: 0; pointer-events: none; }
+
+.instruction {
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #eceff1;
+  font-size: 1.4rem;
+  font-weight: 500;
+  z-index: 100000;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+body.rope-locked { overflow: hidden !important; }
